@@ -3,49 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery (Optimized) — The Coffee Corner</title>
-  <meta name="description" content="Optimized coffee gallery with lazy-loaded images and a lightweight brewing video.">
+  <title>Gallery (Unoptimized) — The Coffee Corner</title>
   <style>
-    :root { --gap: 16px; }
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; }
-    header, footer { padding: 16px; background: #f3f3f3; }
-    main { padding: 16px; max-width: 1100px; margin: auto; }
-
-    .grid { display: flex; flex-wrap: wrap; gap: var(--gap); }
-    .grid img { flex: 1 1 calc(33.333% - var(--gap)); max-width: calc(33.333% - var(--gap)); display: block; border-radius: 8px; }
-    @media (max-width: 800px) { .grid img { flex-basis: calc(50% - var(--gap)); max-width: calc(50% - var(--gap)); } }
-    @media (max-width: 480px) { .grid img { flex-basis: 100%; max-width: 100%; } }
-
+    body { font-family: Arial, sans-serif; margin: 0; }
+    header, footer { padding: 16px; background: #eee; }
+    main { padding: 16px; }
+    .grid { display: flex; flex-wrap: wrap; gap: 16px; }
+    .grid img { flex: 1 1 30%; max-width: 30%;  }
     .media { margin-top: 24px; }
-    figure { margin: 0; }
-    figcaption { font-size: 0.9rem; opacity: 0.75; margin-top: 4px; }
-
-    img { height: auto; }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Brewing Moments (Optimized)</h1>
-    <nav><a href="index.html">Optimized</a> | <a href="gallery-unoptimized.html">Unoptimized</a></nav>
-  </header>
+<header>
+  <h1>Brewing Moments (Unoptimized)</h1>
+  <nav><a href="index.html">Optimized</a> | <a href="gallery-unoptimized.html">Unoptimized</a></nav>
+</header>
   <main>
-    <section aria-label="Coffee images">
+    <section>
       <h2>Photo Gallery</h2>
-     <div class="grid">
-        <img src="1.jpeg" alt="Gallery image 2">
-        <img src="2.jpg" alt="Gallery image 4">
-        <img src="3.jpg" alt="Gallery image 6"> 
-        <img src="1.jpeg" alt="Gallery image 2">
-        <img src="2.jpg" alt="Gallery image 4">
-        <img src="3.jpg" alt="Gallery image 6">
+      <div class="grid">
+        <img src="01.jpg" alt="Gallery image 2">
+        <img src="02.jpg" alt="Gallery image 4">
+        <img src="03.jpg" alt="Gallery image 6"> 
+        <img src="01.jpg" alt="Gallery image 2">
+        <img src="02.jpg" alt="Gallery image 4">
+        <img src="03.jpg" alt="Gallery image 6">
       </div>
     </section>
 
-    <section class="media" aria-label="Brewing video">
-      <h2>How we brew</h2>
-      <!-- Lighter video: do not preload, and use a poster to avoid layout shift -->
-      <video controls preload="none" width="800" height="450" poster="">
-        <source src="video.mp4" type="video/mp4">
+    <section class="media">
+      <h2>How we brew (Unoptimized)</h2>
+      <video controls preload="auto" width="800" height="450">
+        <source src="video1.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </section>
