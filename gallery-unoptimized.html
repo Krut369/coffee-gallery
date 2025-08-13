@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery (Unoptimized) — The Coffee Corner</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; }
+    header, footer { padding: 16px; background: #eee; }
+    main { padding: 16px; }
+    .grid { display: flex; flex-wrap: wrap; gap: 16px; }
+    .grid img { flex: 1 1 30%; max-width: 30%;  }
+    .media { margin-top: 24px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Brewing Moments (Unoptimized)</h1>
+  <nav><a href="gallery.html">Optimized</a> | <a href="gallery-unoptimized.html">Unoptimized</a></nav>
+</header>
+  <main>
+    <section>
+      <h2>Photo Gallery</h2>
+      <div class="grid">
+        <img src="01.jpg" alt="Gallery image 2">
+        <img src="02.jpg" alt="Gallery image 4">
+        <img src="03.jpg" alt="Gallery image 6"> 
+        <img src="01.jpg" alt="Gallery image 2">
+        <img src="02.jpg" alt="Gallery image 4">
+        <img src="03.jpg" alt="Gallery image 6">
+      </div>
+    </section>
+
+    <section class="media">
+      <h2>How we brew (Unoptimized)</h2>
+      <video controls preload="auto" width="800" height="450">
+        <source src="video1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+  </main>
+
+  <footer>© The Coffee Corner</footer>
+</body>
+</html>
